@@ -1,0 +1,3 @@
+<launch> 
+	<node pkg="agv" type="move_to_pose" name="move_to_pose_node" output="screen" />
+</launch>

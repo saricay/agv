@@ -1,0 +1,1 @@
+catkin_make --directory ~/catkin_ws --pkg agv
