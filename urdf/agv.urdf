@@ -844,7 +844,7 @@
        achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
        stddev of 0.01m will put 99.7% of samples within 0.03m of the true
        reading. -->
-
+<!--
   <gazebo reference="front_laser">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -908,6 +908,7 @@
       </plugin>
     </sensor>
   </gazebo>
+-->
 
     <gazebo>
       <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
@@ -943,6 +944,7 @@
         <publishWheelJointState>true</publishWheelJointState>
         <!-- Set to true to swap right and left wheels, defaults to true -->
         <legacyMode>false</legacyMode>
+        
       </plugin>
     </gazebo>
 
