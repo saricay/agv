@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
 
 
 	while (ros::ok()) {
-		v_control=0.4*dist_error;
+		v_control=0.3*dist_error;
 		w_control=0.75*yaw_error;
 		if (abs(v_control)>1){v_control=v_control/abs(v_control);}
 		else{v_control=v_control;}
