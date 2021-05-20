@@ -6,3 +6,5 @@ git clone https://github.com/saricay/agv.git<br/>
 cd ..<br/>
 catkin_make<br/>
 #or to compile the agv package only
+cd ~/catkin_ws/srv/agv
+source compile.sh
