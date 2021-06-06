@@ -22,8 +22,8 @@ GPIO.output(in2, GPIO.LOW)
 GPIO.output(in3, GPIO.LOW)
 GPIO.output(in4, GPIO.LOW)
 
-p1=GPIO.PWM(ena,10000)
-p2=GPIO.PWM(enb,10000)
+p1=GPIO.PWM(ena,20000)
+p2=GPIO.PWM(enb,20000)
 
 #p1.start(80)
 #p2.start(90)
@@ -31,44 +31,33 @@ p2=GPIO.PWM(enb,10000)
 def forward():
     print("moving forward")
     GPIO.output(in1,GPIO.LOW)
+    GPIO.output(in2,GPIO.HIGH)#right forward
+    GPIO.output(in3,GPIO.HIGH)#left forward
+    GPIO.output(in4,GPIO.LOW)
+
+def backward():
+    print("moving backward")
+    GPIO.output(in1,GPIO.HIGH)
+    GPIO.output(in2,GPIO.LOW)
+    GPIO.output(in3,GPIO.LOW)
+    GPIO.output(in4,GPIO.HIGH)
+    
+def turn_right():
+    print("turning right")
+    GPIO.output(in1,GPIO.HIGH)
+    GPIO.output(in2,GPIO.LOW)
+    GPIO.output(in3,GPIO.HIGH)
+    GPIO.output(in4,GPIO.LOW)
+    
+def turn_left():
+    print("turning left")
+    GPIO.output(in1,GPIO.LOW)
     GPIO.output(in2,GPIO.HIGH)
-    GPIO.output(in3,GPIO.HIGH)
-    GPIO.output(in4,GPIO.LOW)
-
-def backward():
-    print("moving backward")
-    GPIO.output(in1,GPIO.HIGH)
-    GPIO.output(in2,GPIO.LOW)
     GPIO.output(in3,GPIO.LOW)
     GPIO.output(in4,GPIO.HIGH)
-    sleep(0.45)
-    
-def turn_right():
-    print("turning right")
-    GPIO.output(in1,GPIO.HIGH)
-    GPIO.output(in2,GPIO.LOW)
-    GPIO.output(in3,GPIO.HIGH)
-    GPIO.output(in4,GPIO.LOW)
-    sleep(0.45)
-
-def backward():
-    print("moving backward")
-    GPIO.output(in1,GPIO.HIGH)
-    GPIO.output(in2,GPIO.LOW)
-    GPIO.output(in3,GPIO.LOW)
-    GPIO.output(in4,GPIO.HIGH)
-    sleep(0.45)
-    
-def turn_right():
-    print("turning right")
-    GPIO.output(in1,GPIO.HIGH)
-    GPIO.output(in2,GPIO.LOW)
-    GPIO.output(in3,GPIO.HIGH)
-    GPIO.output(in4,GPIO.LOW)
-    sleep(0.45)
 
 def stop():
-    print("stopping")
+    print("stopped")
     GPIO.output(in1,GPIO.LOW)
     GPIO.output(in2,GPIO.LOW)
     GPIO.output(in3,GPIO.LOW)
@@ -81,6 +70,7 @@ def decide():
 
         if x=='w':
             forward()
+            sleep(45)
             stop()
 
         elif x=='s':
@@ -88,21 +78,22 @@ def decide():
 
         elif x=='d':
             turn_right()
-            stop()
-
-        elif x=='s':
+            sleep(45)
             stop()
 
         elif x=='d':
             turn_right()
+            sleep(45)
             stop()
 
         elif x=='a':
             turn_left()
+            sleep(45)
             stop()
 
         elif x=='x':
             backward()
+            sleep(45)
             stop()
 
         elif x=='e':
