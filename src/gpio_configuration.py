@@ -70,31 +70,31 @@ def decide():
 
         if x=='w':
             forward()
-            sleep(45)
-            stop()
+            p1.start(40)
+            p2.start(80)
 
         elif x=='s':
             stop()
 
         elif x=='d':
             turn_right()
-            sleep(45)
-            stop()
+            p1.start(40)
+            p2.start(80)
 
         elif x=='d':
             turn_right()
-            sleep(45)
-            stop()
+            p1.start(40)
+            p2.start(80)
 
         elif x=='a':
             turn_left()
-            sleep(45)
-            stop()
+            p1.start(40)
+            p2.start(80)
 
         elif x=='x':
             backward()
-            sleep(45)
-            stop()
+            p1.start(40)
+            p2.start(80)
 
         elif x=='e':
             print("process has finished")
