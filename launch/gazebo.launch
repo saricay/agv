@@ -1,6 +1,7 @@
 <launch>
   <include
     file="$(find agv)/launch/station_world.launch" />
+    #file="$(find agv)/launch/empty_world.launch" />
   <node
     name="tf_footprint_base"
     pkg="tf"

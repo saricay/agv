@@ -3,11 +3,13 @@ cmake_minimum_required(VERSION 2.8.3)
 project(agv)
 
 find_package(catkin REQUIRED COMPONENTS
-  roscpp)
+  roscpp
+  rospy)
 
 catkin_package()
 
-find_package(roslaunch)
+#find_package(roslaunch)
+find_package(Boost REQUIRED COMPONENTS system)
 
 add_executable(move_agv src/move_agv.cpp)
 add_dependencies(move_agv ${move_agv_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

@@ -82,6 +82,19 @@
         <mesh
           filename="package://agv/meshes/rf_castor.STL" />
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+      </surface>
     </collision>
   </link>
   <joint
@@ -138,10 +151,15 @@
       <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -196,6 +214,19 @@
         <mesh
           filename="package://agv/meshes/lf_castor.STL" />
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+      </surface>
     </collision>
   </link>
   <joint
@@ -252,10 +283,15 @@
        <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -310,6 +346,19 @@
         <mesh
           filename="package://agv/meshes/rb_castor.STL" />
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+      </surface>
     </collision>
   </link>
   <joint
@@ -366,10 +415,15 @@
       <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -424,6 +478,19 @@
         <mesh
           filename="package://agv/meshes/lb_castor.STL" />
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+      </surface>
     </collision>
   </link>
   <joint
@@ -480,10 +547,15 @@
       <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -541,10 +613,15 @@
       <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -602,10 +679,15 @@
       <surface>
         <friction>
           <ode>
-            <mu>0.1</mu>
-            <mu2>0.1</mu2>
+            <mu>0.01</mu>
+            <mu2>0.01</mu2>
           </ode>
         </friction>
+        <contact>
+          <ode>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
       </surface>
     </collision>
   </link>
@@ -844,7 +926,7 @@
        achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
        stddev of 0.01m will put 99.7% of samples within 0.03m of the true
        reading. -->
-
+<!--
   <gazebo reference="front_laser">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -909,7 +991,7 @@
     </sensor>
   </gazebo>
 
-
+-->
     <gazebo>
       <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
         <!-- Plugin update rate in Hz -->
